@@ -1,0 +1,66 @@
+/*
+Applies box-sizing property to all elements on the page.
+Border-box value makes sure that padding and border are included in the element's total width or height.
+This means that the specified width and height of an element include the padding and border sizes, making layout calculations easier and more intuitive.
+*/
+
+/*
+display: flex; creates a flexible container where items can be dynamically arranged along a main axis 
+(horizontal by default) and a cross axis (vertical by default).
+This allows for easy alignment, distribution, and rearrangement of items.
+*/
+
+/*
+Flexbox has a main and cross axis. The main axis is determined by the flex-direction property, which can be set to:
+- row (default): Horizontal axis with flex items arranged from left to right.
+- row-reverse: Horizontal axis with flex items arranged from right to left.
+- column: Vertical axis with flex items arranged from top to bottom.
+- column-reverse: Vertical axis with flex items arranged from bottom to top.
+*/
+
+/* i create a element empty with pseudo-element after*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  text-transform: uppercase;
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+  background-color: #0a0a23;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  margin: 0 auto;
+  max-width: 1400px;
+  gap: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::before {
+  content: " je suis l'element caché ";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 350px;
+}

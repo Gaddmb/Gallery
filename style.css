@@ -55,12 +55,12 @@ Flexbox has a main and cross axis. The main axis is determined by the flex-direc
   object-fit: cover;
   border-radius: 10px;
 }
-
-.gallery::before {
-  content: " je suis l'element caché ";
+/* 
+.gallery::after {
+  content: " ";
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 350px;
-}
+} */
